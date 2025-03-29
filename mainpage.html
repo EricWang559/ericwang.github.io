@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Wang - Portfolio</title>
+    <link rel="icon" type="image/png" href="images/IMG_1417.png">
+    <link id="theme-style" rel="stylesheet" href="styles/style.css"> <!-- Default to light theme -->
+</head>
+<body>
+    <!-- load header and navigation  -->
+    <div id="header-container"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // show container after header loads
+                // container.style.display = 'block'
+            })
+            .catch(error => console.error('error loading header:', error))
+    </script>
+    
+
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, I'm Eric! I'm a 15-year-old junior from Texas.</p>
+        <p>I'm passionate about coding, violin, and math.</p>
+        <p>I'm fluent in English and Mandarin Chinese.</p>
+    </section>
+
+    <section id="awards">
+        <h2>Awards & Experience</h2>
+        
+        <h3>Research & Summer Programs</h3>
+        <h4>2022</h4>
+        <ul>
+            <li><strong>Texas A&M STEM Research Camp</strong> - Conducted STEM Research.</li>
+        </ul>
+        <h4>2023</h4>
+        <ul>
+            <li><strong>Yale SIG Camp</strong> - Neuroscience and Regenerative Medicine.</li>
+        </ul>
+        <h4>2025</h4>
+        <ul>
+            <li><strong>UT Austin Research Program</strong> - Research in AI and Machine Learning.</li>
+        </ul>
+
+        <h3>Competitions & Recognitions</h3>
+        <h4>2023</h4>
+        <ul>
+            <li>GARSEF - Material Science</li>
+            <li>Region Full Orchestra</li>
+
+        </ul>
+        <h4>2024</h4>
+        <ul>
+            <li>SME Digital Manufacturing Award</li>
+            <li>NIH BRAIN NeuroAI Honorary Mention</li>
+            <li>AMC12 - Distinction</li>
+            <li>Region Full Orchestra</li>
+        </ul>
+
+        <h4>2025</h4>
+        <ul>
+            <li>2nd Place GARSEF - Material Science</li>
+            <li> TXSEF State Qualifier </li>
+            <li>AIME National Qualifier</li>
+            <li>BPA National Alternate (Python)</li>
+            <li>TEAMS National Qualifier</li>
+            <li>Region Full Orchestra</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Java Programming Certificate</li>
+            <li>Java Industry Based Certification</li>
+            <li>Python Programming Certificate</li>
+            <li>C++ Programming Certificate</li>
+            <li>HTML & CSS Certificate</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <h3>Coding Languages</h3>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>GDScript</li>
+        </ul>
+    </section>
+
+    <section id="roles">
+        <h2>Positions & Roles</h2>
+        <h3>Competitions</h3>
+        <ul>
+            <li>UIL Number Sense, Calculator, Math, Science, Accounting, Computer Science</li>
+        </ul>
+
+        <h3>Leadership (2025)</h3>
+        <ul>
+            <li>Math Club Officer</li>
+            <li>Computer Science Club Officer</li>
+            <li>Scholars of Science Officer, Treasurer</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Portfolio Website</strong> - Built using GitHub Pages, HTML, and CSS.</li>
+            <li><strong>Machine Learning Model</strong> - Developed a data analysis model in Python.</li>
+            <li><strong>Game Development</strong> - Created many 2D games and simulations using Pygame.</li>
+            <li><strong>Godot Game Development</strong> - Created a 2D game using Godot</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:ericwang559@gmail.com">ericwang559@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/EricWang559" target="_blank">github.com/EricWang559</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Eric Wang. All rights reserved.</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementsByClassName("tablink")[0].click();
+    </script>
+</body>
+</html>
